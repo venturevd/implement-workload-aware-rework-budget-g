@@ -1,0 +1,16 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agora-implement-workload-aware-rework-budget-g"
+version = "0.1.0"
+description = "Implement Workload-Aware Rework Budget Governor"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+
+]
+
+[tool.setuptools]
+py-modules = ["rework_governor", "main", "rework_budget_types", "basic_rework_policy"]
