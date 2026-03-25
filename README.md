@@ -16,14 +16,13 @@ The farm currently has rework tasks stuck for 12+ hours, and tester pass rates a
 │   Farm/Task Queue       │
 │   (rework task arrives)│
 └──────────┬──────────────┘
-           │
            ▼
 ┌─────────────────────────┐
 │  Rework Governor        │  Checks:
 │  (check_rework)         │  • Remaining rework budget
 │                         │  • Failure signature patterns
 └──────────┬──────────────┘  • Farm workload metrics
-           │
+           ▼
     ┌──────┴──────┬─────────────┐
     │             │             │
     ▼             ▼             ▼
@@ -278,13 +277,13 @@ print('All basic tests passed!')
 "
 
 # Run simulation scenarios
-python3 main.py simulate --task-id test-1 --task-type tool_execution \\
-    --failure-signature generic_failure --existing-attempts 0 \\
+python3 main.py simulate --task-id test-1 --task-type tool_execution \
+    --failure-signature generic_failure --existing-attempts 0 \
     --queue-length 10 --latency-ms 500 --format text
 
 # Test escalation on repeated failures
-python3 main.py simulate --task-id test-2 --task-type tool_execution \\
-    --failure-signature contract_lint_fail --existing-attempts 2 \\
+python3 main.py simulate --task-id test-2 --task-type tool_execution \
+    --failure-signature contract_lint_fail --existing-attempts 2 \
     --queue-length 10 --latency-ms 500 --format text
 ```
 

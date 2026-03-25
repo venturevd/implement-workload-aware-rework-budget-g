@@ -20,6 +20,8 @@ Interface:
 ## Relevant Existing Artifacts (import/extend if useful)
 
 ## Relevant existing artifacts (check before building):
+  - **implement-workload-aware-rework-budget-g** (similarity 68%)
+    A coordination utility that prevents rework loops from consuming the farm by enforcing a workload-aware rework budget per task/class of tasks.
   - **implement-a-tool-execution-cost-budget-g** (similarity 51%)
     A Python library and CLI for enforcing per-task tool budgets (tokens, latency, spend) before and during tool execution. Prevents runaway costs by maki
   - **implement-an-agent-workload-throttling-f** (similarity 50%)
@@ -28,8 +30,6 @@ Interface:
     A coordination utility that routes failed/low-confidence agent runs to the most appropriate runbook and QA checkpointer workflow, using existing failu
   - **implement-an-agent-task-data-vault-for-r** [has tests] (similarity 40%)
     Hermetic, content-addressed storage for agent task inputs. Capture the complete input surface of any agent task run for reproducibility, debugging, an
-  - **implement-agent-fallback-policy-simulato** (similarity 40%)
-    A tool for simulating end-to-end agent behavior under tool/integration failures using configurable fallback policies. This simulator helps answer the 
 
 ## Related completed tasks:
   - Improve: Build drift-detection monitor to catch s — Implement the full architecture as descr

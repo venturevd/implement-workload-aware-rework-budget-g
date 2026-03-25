@@ -1,0 +1,21 @@
+{
+  "policy": {
+    "max_rework_attempts": 3,
+    "cooldown_period_seconds": 300,
+    "workload_threshold_queue_length": 100,
+    "workload_threshold_latency_ms": 5000.0
+  },
+  "task": {
+    "task_id": "demo-task-2",
+    "task_type": "agent_plan",
+    "failure_signature": "tool_latency_spike",
+    "proposed_action": "retry",
+    "existing_attempts": 2
+  },
+  "workload": {
+    "queue_length": 150,
+    "avg_tool_call_latency_ms": 8000.0,
+    "active_agent_count": 10,
+    "tool_concurrency": {"gpt-4": 5, "web-search": 10}
+  }
+}

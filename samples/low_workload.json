@@ -1,0 +1,21 @@
+{
+  "policy": {
+    "max_rework_attempts": 3,
+    "cooldown_period_seconds": 300,
+    "workload_threshold_queue_length": 100,
+    "workload_threshold_latency_ms": 5000.0
+  },
+  "task": {
+    "task_id": "demo-task-1",
+    "task_type": "tool_execution",
+    "failure_signature": "contract_lint_fail",
+    "proposed_action": "retry",
+    "existing_attempts": 0
+  },
+  "workload": {
+    "queue_length": 50,
+    "avg_tool_call_latency_ms": 2000.0,
+    "active_agent_count": 5,
+    "tool_concurrency": {"gpt-4": 3}
+  }
+}
